@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text('Welcome ${user.data!.email}'),
+                    Text("You are now logged in"),
                     ElevatedButton(
                       onPressed: () async {
                         await FirebaseAuth.instance.signOut().then(
