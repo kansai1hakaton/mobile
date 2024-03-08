@@ -18,19 +18,21 @@ class _LogInScreenState extends State<LogInScreen> {
       appBar: AppBar(
         title: Text('Log In'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            emailInput(),
-            passwordInput(),
-            loginButton(),
-            TextButton(
-                onPressed: () => Navigator.pushNamed(context, '/signUp'),
-                child: const Text("Sign up"))
-          ],
-        ),
-      ),
+      body: Container(
+          child: Form(
+              key: _key,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  emailInput(),
+                  passwordInput(),
+                  loginButton(),
+                  TextButton(
+                    onPressed: () => Navigator.pushNamed(context, "/signUp"),
+                    child: const Text("Sign up"),
+                  )
+                ],
+              ))),
     );
   }
 

@@ -20,13 +20,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
         title: Text('Sign Up'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            emailInput(),
-            passwordInput(),
-            submitButton(),
-          ],
+        child: Form(
+          key: _key,
+          child: Column(
+            children: [emailInput(), passwordInput(), submitButton()],
+          ),
         ),
       ),
     );
