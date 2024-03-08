@@ -60,27 +60,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-    // return MaterialApp(
-    //     home: Scaffold(
-    // backgroundColor: Colors.black,
-    // body: Column(
-    //   children: [
-    //     SizedBox(
-    //       height: 100,
-    //     ),
-    //     Row(
-    //       children: [
-    //         Column(
-    //           children: [
-    //             Text(
-    //               "hey",
-    //               style: TextStyle(color: Colors.white),
-    //             ),
-    //             Text("da")
-    //           ],
-    //         )
-    //       ],
-    //     )
-    //   ],
-    // )));
