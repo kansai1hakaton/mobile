@@ -40,6 +40,9 @@ dependencies:
   flutter_localization: ^0.2.0
   intl: ^0.18.1
   shared_preferences: ^2.2.2
+  firebase_core: ^2.26.0
+  flutter_riverpod: ^2.4.10
+  flutter_hooks: ^0.20.5
 
 
 dev_dependencies:
