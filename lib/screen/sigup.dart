@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class SignInPage extends StatelessWidget {
               onPressed: () {
                 // Add your sign-in logic here
               },
-              child: Text('Sign In'),
+              child: Text('Sign Un'),
             ),
           ],
         ),

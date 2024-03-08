@@ -43,6 +43,7 @@ dependencies:
   firebase_core: ^2.26.0
   flutter_riverpod: ^2.4.10
   flutter_hooks: ^0.20.5
+  firebase_auth: ^4.17.7
 
 
 dev_dependencies:
