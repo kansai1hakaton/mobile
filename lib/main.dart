@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'singin.dart';
+import 'sing_up.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,21 +37,44 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("hello"),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SignInPage()),
-            );
-          },
-          child: Text('Go to Sign In Page'),
-        ),
-      ),
-    );
+    return MaterialApp(
+        home: Scaffold(
+            backgroundColor: Colors.black,
+            body: Column(
+              children: [
+                SizedBox(
+                  height: 100,
+                ),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          "hey",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text("da")
+                      ],
+                    )
+                  ],
+                )
+              ],
+            )));
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text("hello"),
+    //   ),
+    //   body: Center(
+    //     child: ElevatedButton(
+    //       onPressed: () {
+    //         Navigator.push(
+    //           context,
+    //           MaterialPageRoute(builder: (context) => SignInPage()),
+    //         );
+    //       },
+    //       child: Text('Go to Sign In Page'),
+    //     ),
+    //   ),
+    // );
   }
 }
