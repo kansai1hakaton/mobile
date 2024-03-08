@@ -6,7 +6,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile編集'),
+        title: Text('Profile 編集'),
       ),
       body: Column(
         // Column内の要素を中央に配置
@@ -73,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
                 horizontal: 50, vertical: 20), //horizonta:左右、vertical上下
             child: Text(
               "書いた記事",
-              style: TextStyle(fontSize: 30),
+              style: TextStyle(fontSize: 25),
             ),
           ),
         ],
