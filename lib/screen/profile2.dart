@@ -42,9 +42,7 @@ class Profile2Screen extends HookWidget {
               child: TextField(
                 textAlign: TextAlign.center, // テキストを中央揃えにする
                 style: TextStyle(fontSize: 24),
-                decoration: InputDecoration(
-                  hintText: "name",
-                ),
+                decoration: InputDecoration(),
               ),
             ),
             Padding(
@@ -53,7 +51,6 @@ class Profile2Screen extends HookWidget {
               child: TextField(
                 decoration: InputDecoration(
                   icon: Icon(Icons.person),
-                  hintText: "nickname",
                 ),
               ),
             ),
@@ -63,7 +60,6 @@ class Profile2Screen extends HookWidget {
               child: TextField(
                 decoration: InputDecoration(
                   icon: Icon(Icons.cake),
-                  hintText: "birthday",
                 ),
               ),
             ),
@@ -73,7 +69,6 @@ class Profile2Screen extends HookWidget {
               child: TextField(
                 decoration: InputDecoration(
                   icon: Icon(Icons.edit),
-                  hintText: "comment",
                 ),
               ),
             ),
@@ -83,7 +78,6 @@ class Profile2Screen extends HookWidget {
               child: TextField(
                 decoration: InputDecoration(
                   icon: Icon(Icons.directions_walk),
-                  hintText: "have visited",
                 ),
               ),
             ),
