@@ -9,7 +9,7 @@ class BottomNav extends StatelessWidget {
         if (Index == 0) {
           Navigator.pushNamed(context, '/');
         } else if (Index == 1) {
-          Navigator.pushNamed(context, '/business');
+          Navigator.pushNamed(context, '/test');
         } else if (Index == 2) {
           Navigator.pushNamed(context, '/school');
         }
