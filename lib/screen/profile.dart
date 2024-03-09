@@ -9,7 +9,6 @@ class ProfileScreen extends StatelessWidget {
         title: Text('Profile 編集'),
       ),
       body: Column(
-        // Column内の要素を中央に配置
         children: [
           Padding(
             padding: EdgeInsets.only(top: 50),
