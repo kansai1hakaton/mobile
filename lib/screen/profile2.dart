@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:mobile/screen/profile.dart';
 
-class Profile2screen extends HookWidget {
+class Profile2Screen extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

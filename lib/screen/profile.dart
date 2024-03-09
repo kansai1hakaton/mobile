@@ -22,7 +22,7 @@ class ProfileScreen extends HookWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Profile2screen()),
+                      MaterialPageRoute(builder: (context) => Profile2Screen()),
                     );
                   },
                 ),
