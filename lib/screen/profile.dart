@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:mobile/screen/profile2.dart';
 
 class ProfileScreen extends HookWidget {
   @override
@@ -11,6 +12,23 @@ class ProfileScreen extends HookWidget {
       ),
       body: Column(
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: ElevatedButton(
+                  child: Text("編集を終了"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Profile2screen()),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
           Padding(
             padding: EdgeInsets.only(top: 50),
             child: Center(
