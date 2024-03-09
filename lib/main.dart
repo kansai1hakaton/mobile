@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile/screen/home_page.dart';
 import 'package:mobile/firebase_options.dart';
 import 'package:mobile/screen/home_page.dart';
+import 'package:mobile/screen/test.dart';
 // import 'package:firebase_core/firebase_core.dart';
 import 'screen/sigup.dart';
 import 'screen/login.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => HomePage(),
           '/signUp': (context) => SignUpScreen(),
           '/logIn': (context) => LogInScreen(),
+          '/test': (context) => TestPage(),
         });
   }
 }

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/screen/login.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,6 +24,7 @@ class _HomePageState extends State<HomePage> {
               appBar: AppBar(
                 title: Text('Home'),
               ),
+              bottomNavigationBar: BottomNav(),
               body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
