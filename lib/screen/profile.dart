@@ -34,6 +34,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             return Scaffold(
               body: Center(
                 child: Text((snapshot.data as QuerySnapshot).docs[0]['email']),
+                child: Text((snapshot.data as QuerySnapshot).docs[0]['name']),
+                child:
+                    Text((snapshot.data as QuerySnapshot).docs[0]['nickname']),
               ),
             );
             // return snapshot.hasData
