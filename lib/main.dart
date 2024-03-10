@@ -9,7 +9,7 @@ import 'package:mobile/screen/profile.dart';
 import 'package:mobile/screen/profile_edit.dart';
 import 'package:mobile/screen/setting_page.dart';
 
-import 'package:mobile/screen/test.dart';
+import 'package:mobile/screen/map.dart';
 
 // import 'package:firebase_core/firebase_core.dart';
 import 'screen/sigup.dart';
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           '/signUp': (context) => SignUpScreen(),
           '/logIn': (context) => LogInScreen(),
           '/profile': (context) => ProfileScreen(),
-          '/test': (context) => TestPage(),
+          '/test': (context) => MapScreen(),
           '/setting': (context) => Setting(),
         });
   }
