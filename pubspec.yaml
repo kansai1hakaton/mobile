@@ -46,6 +46,8 @@ dependencies:
     cloud_firestore: ^4.15.8
     google_maps_flutter: ^2.5.3
 
+assets:
+    - assets/images
 dev_dependencies:
     flutter_test:
         sdk: flutter

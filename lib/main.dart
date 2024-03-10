@@ -3,11 +3,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile/screen/home_page.dart';
 import 'package:mobile/firebase_options.dart';
-import 'package:mobile/screen/home_page.dart';
 
 import 'package:mobile/screen/profile.dart';
-import 'package:mobile/screen/profile_edit.dart';
 import 'package:mobile/screen/setting_page.dart';
+import 'package:mobile/screen/city.dart';
 
 import 'package:mobile/screen/map.dart';
 
@@ -45,9 +44,12 @@ class MyApp extends StatelessWidget {
           '/profile': (context) => ProfileScreen(),
           '/map': (context) => MapScreen(),
           '/setting': (context) => Setting(),
+          '/city': (context) => CityScreen(),
         });
   }
 }
+
+class City {}
 
 class Home extends StatelessWidget {
   @override
