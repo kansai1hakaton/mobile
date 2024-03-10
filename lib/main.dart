@@ -9,7 +9,7 @@ import 'package:mobile/screen/chat.dart';
 import 'package:mobile/screen/chatlist.dart';
 import 'package:mobile/firebase_options.dart';
 
-import 'package:mobile/home.dart';
+import 'package:mobile/screen/home.dart';
 import 'package:mobile/screen/profile.dart';
 import 'package:mobile/screen/setting_page.dart';
 import 'package:mobile/screen/city.dart';
