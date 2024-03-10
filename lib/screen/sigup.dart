@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _key = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  // final FirebaseFirestore _database;
+  // final FirebaseAuth user;
+
+  // _SignUpScreenState(this._database, this.user);
 
   @override
   Widget build(BuildContext context) {
@@ -69,12 +74,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
         onPressed: () async {
           if (_key.currentState!.validate()) {
             try {
-              final credential = await FirebaseAuth.instance
-                  .createUserWithEmailAndPassword(
-                    email: _emailController.text,
-                    password: _passwordController.text,
-                  )
-                  .then((_) => Navigator.pushNamed(context, "/"));
+              final UserCredential userCredential =
+                  await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                email: _emailController.text,
+                password: _passwordController.text,
+              );
+
+              FirebaseFirestore.instance
+                  .collection("users")
+                  .doc(userCredential.user!.uid)
+                  .set(
+                {
+                  "uid": userCredential.user!.uid,
+                  "email": _emailController.text,
+                  "password": _passwordController.text,
+                },
+              );
             } on FirebaseAuthException catch (e) {
               if (e.code == 'weak-password') {
                 print('The password provided is too weak');
@@ -84,6 +99,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             } catch (e) {
               print(e.toString());
             }
+
+            Navigator.pushNamed(context, "/");
           }
         },
         child: Text('Sign Up'));
