@@ -24,8 +24,8 @@ class BottomNav extends StatelessWidget {
           label: 'Map',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.school),
-          label: 'test',
+          icon: Icon(Icons.location_city),
+          label: 'My Trip',
         ),
       ],
     );

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:mobile/components/appbar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/components/photo_card_view.dart';
 import 'package:mobile/components/plan_card.dart';
 import 'package:mobile/models/plan.dart';
@@ -144,9 +145,10 @@ class HomePage extends HookWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         backButton: false,
-        title: 'appname',
+        title: '',
         imageLink: null,
       ),
+      bottomNavigationBar: BottomNav(),
       body: ListView(
         children: [
           Align(
