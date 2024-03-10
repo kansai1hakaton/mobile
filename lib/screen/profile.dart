@@ -28,6 +28,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         title: Text('Profile'),
       ),
+      floatingActionButton: Row(
+          mainAxisAlignment:
+              MainAxisAlignment.spaceBetween, // Adjust the alignment as needed
+          children: [
+            SizedBox(width: 15),
+            SizedBox(
+              width: 200, // Adjust the width as needed
+              child: FloatingActionButton(
+                onPressed: () {
+                  // Action to perform when the button is pressed
+                },
+                child: Text('DM'),
+              ),
+            ),
+            SizedBox(
+              width: 200, // Adjust the width as needed
+              child: FloatingActionButton(
+                onPressed: () {
+                  // Action to perform when the button is pressed
+                },
+                child: Text(
+                  '予約する',
+                ),
+              ),
+            ),
+          ]),
       body: FutureBuilder(
           future: getUserInfo(),
           builder: (context, snapshot) {
@@ -49,7 +75,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['email'],
-                        style: TextStyle(fontSize: 26),
+                        style: TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
@@ -62,7 +88,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['name'],
-                        style: TextStyle(fontSize: 26),
+                        style: TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
@@ -75,37 +101,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['nickname'],
-                        style: TextStyle(fontSize: 26),
+                        style: TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          // ボタンが押された時の処理
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10), // 角の丸みを調整
-                          ),
-                        ),
-                        child: Text('DM'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          // ボタンが押された時の処理
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10), // 角の丸みを調整
-                          ),
-                        ),
-                        child: Text('予約'),
-                      )
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.end,
+                  //   children: [
+                  //     ElevatedButton(
+                  //       onPressed: () {
+                  //         // ボタンが押された時の処理
+                  //       },
+                  //       style: ElevatedButton.styleFrom(
+                  //         shape: RoundedRectangleBorder(
+                  //           borderRadius: BorderRadius.circular(10), // 角の丸みを調整
+                  //         ),
+                  //       ),
+                  //       child: Text('DM'),
+                  //     ),
+                  //     ElevatedButton(
+                  //       onPressed: () {
+                  //         // ボタンが押された時の処理
+                  //       },
+                  //       style: ElevatedButton.styleFrom(
+                  //         shape: RoundedRectangleBorder(
+                  //           borderRadius: BorderRadius.circular(10), // 角の丸みを調整
+                  //         ),
+                  //       ),
+                  //       child: Text('予約'),
+                  //     )
+                  //   ],
+                  // ),
                 ]),
               ),
             );
