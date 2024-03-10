@@ -11,7 +11,7 @@ class BottomNav extends StatelessWidget {
         } else if (Index == 1) {
           Navigator.pushNamed(context, '/test');
         } else if (Index == 2) {
-          Navigator.pushNamed(context, '/school');
+          Navigator.pushNamed(context, '/city');
         }
       },
       items: const <BottomNavigationBarItem>[

@@ -18,41 +18,9 @@ class _CityScreenState extends State<CityScreen> {
         title: Text('City'),
       ),
       body: Center(
-        child: Form(
-          key: _key,
-          child: Column(
-            children: [cityInput(), submitButton()],
-          ),
-        ),
+        child: Image.network(
+            'https://s3-ap-northeast-1.amazonaws.com/thegate/2020/08/12/14/32/34/tokyotower.jpg'),
       ),
-    );
-  }
-
-  TextFormField cityInput() {
-    return TextFormField(
-      controller: _cityController,
-      autofocus: true,
-      decoration: const InputDecoration(
-        labelText: 'City',
-      ),
-      validator: (value) {
-        if (value!.isEmpty) {
-          return 'Please enter your city';
-        } else {
-          return null;
-        }
-      },
-    );
-  }
-
-  ElevatedButton submitButton() {
-    return ElevatedButton(
-      onPressed: () {
-        if (_key.currentState!.validate()) {
-          Navigator.pushNamed(context, '/home');
-        }
-      },
-      child: const Text('Submit'),
     );
   }
 }

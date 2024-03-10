@@ -45,6 +45,8 @@ dependencies:
     firebase_auth: ^4.17.7
     cloud_firestore: ^4.15.8
 
+assets:
+    - assets/images
 dev_dependencies:
     flutter_test:
         sdk: flutter
