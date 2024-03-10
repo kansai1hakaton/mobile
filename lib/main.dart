@@ -7,6 +7,7 @@ import 'package:mobile/screen/home_page.dart';
 
 import 'package:mobile/screen/profile.dart';
 import 'package:mobile/screen/profile_edit.dart';
+import 'package:mobile/screen/setting_page.dart';
 
 import 'package:mobile/screen/test.dart';
 
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
           '/logIn': (context) => LogInScreen(),
           '/profile': (context) => ProfileScreen(),
           '/test': (context) => TestPage(),
+          '/setting': (context) => Setting(),
         });
   }
 }
