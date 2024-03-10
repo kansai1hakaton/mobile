@@ -35,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               body: Center(
                 child: Column(children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 50),
+                    padding: EdgeInsets.only(top: 30),
                     child: Center(
                       child: Icon(Icons.account_circle, size: 96), // アイコンを配置
                     ),
