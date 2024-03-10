@@ -1,13 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:mobile/screen/login.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
-
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
@@ -17,7 +18,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   getUserInfo() async {
     var result = await FirebaseFirestore.instance.collection('a').get();
-
     print(result);
     return result;
   }
@@ -76,6 +76,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['nickname'],
                         style: TextStyle(fontSize: 26),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                            left: 30, right: 30, top: 20, bottom: 20),
+                      ),
+                      ElevatedButton(
+                        child: Text("DMする"),
+                        onPressed: () {},
                       ),
                     ],
                   ),
