@@ -79,32 +79,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ],
                   ),
-                  Column(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                            left: 30, right: 30, top: 20, bottom: 20),
+                      ElevatedButton(
+                        onPressed: () {
+                          // ボタンが押された時の処理
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10), // 角の丸みを調整
+                          ),
+                        ),
+                        child: Text('DM'),
                       ),
                       ElevatedButton(
-                        child: Text("DMする"),
-                        onPressed: () {},
-                      ),
+                        onPressed: () {
+                          // ボタンが押された時の処理
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10), // 角の丸みを調整
+                          ),
+                        ),
+                        child: Text('予約'),
+                      )
                     ],
                   ),
-
-                  // Text(
-                  //   (snapshot.data as QuerySnapshot).docs[0]['email'],
-                  //   style: TextStyle(fontSize: 26),
-                  // ),
-                  // Text(
-                  //   (snapshot.data as QuerySnapshot).docs[0]['name'],
-                  //   style: TextStyle(fontSize: 26),
-                  // ),
-                  // Text(
-                  //   (snapshot.data as QuerySnapshot).docs[0]['nickname'],
-                  //   style: TextStyle(fontSize: 26),
-                  // ),
                 ]),
               ),
             );
