@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:mobile/components/appbar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile/components/drop_down_menu.dart';
 import 'package:mobile/components/photo_card_view.dart';
 import 'package:mobile/components/plan_card.dart';
 import 'package:mobile/models/plan.dart';
@@ -109,22 +108,13 @@ final tmpPlanList = [
   ),
 ];
 
-// enum regionLabel {
-//   KT('関東'),
-//   KS('近畿'),
-//   HK('北海道'),
-//   SS('中部'),
-//   TG('中国'),
-//   TK('東北'),
-//   KSY('九州');
-
-//   final String label;
-//   const regionLabel(this.label);
-// }
 enum regionLabel {
   KT('関東'),
+  KS('近畿'),
   HK('北海道'),
   SS('中部'),
+  TG('中国'),
+  TK('東北'),
   KSY('九州');
 
   final String label;
@@ -169,20 +159,7 @@ class HomePage extends HookWidget {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.all(15),
-            child: Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                ),
-                height: 250,
-                width: 350,
-                child: PhotoCards(),
-              ),
-            ),
-          ),
+          PhotoCards(),
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
@@ -218,14 +195,16 @@ class HomePage extends HookWidget {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.all(15),
-            child: PlanCard(
-              imageLink: tmpPlanList[0].imageLink,
-              rate: tmpPlanList[0].rate,
-              place: tmpPlanList[0].place,
-            ),
-          ),
+          for (var plan in tmpPlanList)
+            if (regionState.value == plan.region)
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: PlanCard(
+                  imageLink: plan.imageLink,
+                  rate: plan.rate,
+                  place: plan.place,
+                ),
+              ),
         ],
       ),
     );
