@@ -43,6 +43,10 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () => Navigator.pushNamed(context, "/profile"),
                       child: Text("profile"),
                     ),
+                    ElevatedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/setting'),
+                        child: Text("setting"))
                   ],
                 ),
               ),
