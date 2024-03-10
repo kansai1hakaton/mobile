@@ -36,6 +36,10 @@ class _CityScreenState extends State<CityScreen> {
                 // TODO: Implement search functionality
               },
             ),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/chat'),
+              child: null,
+            ),
           ],
         ));
   }

@@ -145,7 +145,7 @@ class HomePage extends HookWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         backButton: false,
-        title: 'appname',
+        title: '',
         imageLink: null,
       ),
       bottomNavigationBar: BottomNav(),
