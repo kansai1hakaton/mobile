@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/components/bottom_nav.dart';
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       onPressed: () => Navigator.pushNamed(context, "/profile"),
                       child: Text("profile"),
-                    )
+                    ),
                   ],
                 ),
               ),
