@@ -126,7 +126,7 @@ class HomePage extends HookWidget {
 
   HomePage({
     super.key,
-    required this.imageLink,
+    this.imageLink,
   });
 
   @override
