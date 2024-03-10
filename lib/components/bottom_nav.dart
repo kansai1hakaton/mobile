@@ -9,7 +9,7 @@ class BottomNav extends StatelessWidget {
         if (Index == 0) {
           Navigator.pushNamed(context, '/');
         } else if (Index == 1) {
-          Navigator.pushNamed(context, '/test');
+          Navigator.pushNamed(context, '/map');
         } else if (Index == 2) {
           Navigator.pushNamed(context, '/school');
         }
@@ -20,8 +20,8 @@ class BottomNav extends StatelessWidget {
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.business),
-          label: 'Business',
+          icon: Icon(Icons.map),
+          label: 'Map',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.school),

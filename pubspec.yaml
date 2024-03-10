@@ -44,6 +44,7 @@ dependencies:
     flutter_hooks: ^0.20.5
     firebase_auth: ^4.17.7
     cloud_firestore: ^4.15.8
+    google_maps_flutter: ^2.5.3
 
 dev_dependencies:
     flutter_test:
