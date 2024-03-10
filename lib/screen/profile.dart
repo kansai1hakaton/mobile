@@ -35,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               body: Center(
                 child: Column(children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 30),
+                    padding: EdgeInsets.only(top: 30, bottom: 30),
                     child: Center(
                       child: Icon(Icons.account_circle, size: 96), // アイコンを配置
                     ),
@@ -43,7 +43,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                        padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
                       ),
                       Icon(Icons.email), // メールアイコン
                       SizedBox(width: 10), // アイコンとテキストの間隔
@@ -56,7 +56,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                        padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
                       ),
                       Icon(Icons.person), // 人物アイコン
                       SizedBox(width: 10), // アイコンとテキストの間隔
@@ -69,7 +69,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                        padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
                       ),
                       Icon(Icons.person_outline), // ニックネームアイコン
                       SizedBox(width: 10), // アイコンとテキストの間隔
