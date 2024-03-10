@@ -31,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ? ClipOval(
                   child: Image.network(
                     'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg',
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fill,
                     width: 40,
                     height: 40,
                   ),
@@ -39,7 +39,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               : ClipOval(
                   child: Image.network(
                     imageLink!,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fill,
                     width: 40,
                     height: 40,
                   ),
