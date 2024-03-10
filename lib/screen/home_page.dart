@@ -37,6 +37,13 @@ class _HomePageState extends State<HomePage> {
                             (_) => Navigator.pushNamed(context, "/logIn"));
                       },
                       child: Text('Log Out'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        await FirebaseAuth.instance.signOut().then(
+                            (_) => Navigator.pushNamed(context, "/profile"));
+                      },
+                      child: Text('Profile'),
                     )
                   ],
                 ),
