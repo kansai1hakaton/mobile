@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:mobile/components/bottom_nav.dart';
 
 // void main() => runApp(const MyApp());
 
@@ -27,6 +28,7 @@ class _MyAppState extends State<MapScreen> {
           title: const Text('Maps Sample App'),
           backgroundColor: Colors.green[700],
         ),
+        bottomNavigationBar: BottomNav(),
         body: GoogleMap(
           onMapCreated: _onMapCreated,
           initialCameraPosition: CameraPosition(
