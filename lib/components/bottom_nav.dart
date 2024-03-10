@@ -25,7 +25,7 @@ class BottomNav extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.school),
-          label: 'School',
+          label: 'test',
         ),
       ],
     );
