@@ -33,33 +33,68 @@ class _ProfileScreenState extends State<ProfileScreen> {
           builder: (context, snapshot) {
             return Scaffold(
               body: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                child: Column(children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 50),
+                    child: Center(
+                      child: Icon(Icons.account_circle, size: 96), // アイコンを配置
+                    ),
+                  ),
+                  Row(
                     children: [
-                      Text((snapshot.data as QuerySnapshot).docs[0]['email']),
-                      Text((snapshot.data as QuerySnapshot).docs[0]['name']),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                      ),
+                      Icon(Icons.email), // メールアイコン
+                      SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
-                          (snapshot.data as QuerySnapshot).docs[0]['nickname']),
-                    ]),
+                        (snapshot.data as QuerySnapshot).docs[0]['email'],
+                        style: TextStyle(fontSize: 26),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                      ),
+                      Icon(Icons.person), // 人物アイコン
+                      SizedBox(width: 10), // アイコンとテキストの間隔
+                      Text(
+                        (snapshot.data as QuerySnapshot).docs[0]['name'],
+                        style: TextStyle(fontSize: 26),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 10, top: 20, bottom: 20),
+                      ),
+                      Icon(Icons.person_outline), // ニックネームアイコン
+                      SizedBox(width: 10), // アイコンとテキストの間隔
+                      Text(
+                        (snapshot.data as QuerySnapshot).docs[0]['nickname'],
+                        style: TextStyle(fontSize: 26),
+                      ),
+                    ],
+                  ),
+
+                  // Text(
+                  //   (snapshot.data as QuerySnapshot).docs[0]['email'],
+                  //   style: TextStyle(fontSize: 26),
+                  // ),
+                  // Text(
+                  //   (snapshot.data as QuerySnapshot).docs[0]['name'],
+                  //   style: TextStyle(fontSize: 26),
+                  // ),
+                  // Text(
+                  //   (snapshot.data as QuerySnapshot).docs[0]['nickname'],
+                  //   style: TextStyle(fontSize: 26),
+                  // ),
+                ]),
               ),
             );
-            // return snapshot.hasData
-            // ? Column(
-            //     children: [
-            //       Text((snapshot.data as Map)['email']),
-            //       ElevatedButton(
-            //         onPressed: () =>
-            //             Navigator.pushNamed(context, "/profileEdit"),
-            //         child: Text('Edit Profile'),
-            //       ),
-            //       ElevatedButton(
-            //         onPressed: () =>
-            //             Navigator.pushNamed(context, "/profile"),
-            //         child: Text("profile"),
-            //       )
-            //     ],
-            //   )
-            // : Center(child: CircularProgressIndicator());
           }),
     );
   }
