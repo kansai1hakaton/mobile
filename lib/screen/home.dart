@@ -157,7 +157,8 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(15),
               child: Text(
                 'ここに行ってみない？',
-                style: GoogleFonts.montserrat(fontSize: 25),
+                style: GoogleFonts.ubuntu(
+                    fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
           ),
@@ -168,6 +169,11 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(10),
               child: Row(
                 children: [
+                  Text(
+                    "地域を選択してください",
+                    style: GoogleFonts.ubuntu(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                   DropdownMenu(
                     controller: regionController,
                     enableFilter: true,
