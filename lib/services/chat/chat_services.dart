@@ -9,7 +9,9 @@ class ChatService {
   ChatService(this._auth, this.database);
 
   Stream<List<Map<String, dynamic>>> getuserStream() {
-    return database.collection('Users').snapshots().map((snapshot) {
+    return database.collection('users').snapshots().map((snapshot) {
+      print(snapshot.docs);
+      // print(user);
       return snapshot.docs.map((doc) {
         final user = doc.data();
         return user;
