@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/screen/login.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,6 +25,7 @@ class _HomePageState extends State<HomePage> {
               appBar: AppBar(
                 title: Text('Home'),
               ),
+              bottomNavigationBar: BottomNav(),
               body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +38,18 @@ class _HomePageState extends State<HomePage> {
                             (_) => Navigator.pushNamed(context, "/logIn"));
                       },
                       child: Text('Log Out'),
-                    )
+                    ),
+                    ElevatedButton(
+                      onPressed: () => Navigator.pushNamed(context, "/profile"),
+                      child: Text("profile"),
+                    ),
+                    ElevatedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/setting'),
+                        child: Text("setting")),
+                    ElevatedButton(
+                        onPressed: () => Navigator.pushNamed(context, '/chat'),
+                        child: Text("chat")),
                   ],
                 ),
               ),
