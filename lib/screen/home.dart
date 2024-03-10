@@ -170,7 +170,7 @@ class HomePage extends HookWidget {
               child: Row(
                 children: [
                   Text(
-                    "地域を選択してください",
+                    "   地域を選択してください    ",
                     style: GoogleFonts.ubuntu(
                         fontSize: 20, fontWeight: FontWeight.bold),
                   ),
@@ -179,7 +179,7 @@ class HomePage extends HookWidget {
                     enableFilter: true,
                     requestFocusOnTap: false,
                     label: Text(regionState.value.toString()),
-                    textStyle: GoogleFonts.montserrat(),
+                    textStyle: GoogleFonts.ubuntu(),
                     inputDecorationTheme: InputDecorationTheme(
                       filled: true,
                       contentPadding: EdgeInsets.symmetric(horizontal: 15),
