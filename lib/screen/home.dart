@@ -145,7 +145,7 @@ class HomePage extends HookWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         backButton: false,
-        title: '',
+        title: '旅するネコ',
         imageLink: null,
       ),
       bottomNavigationBar: BottomNav(),
@@ -157,8 +157,10 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(15),
               child: Text(
                 'ここに行ってみない？',
-                style: GoogleFonts.ubuntu(
-                    fontSize: 25, fontWeight: FontWeight.bold),
+                style: GoogleFonts.anton(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black),
               ),
             ),
           ),
