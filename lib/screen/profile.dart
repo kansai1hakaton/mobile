@@ -32,31 +32,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       bottomNavigationBar: BottomNav(),
       floatingActionButton: Row(
-          mainAxisAlignment:
-              MainAxisAlignment.spaceBetween, // Adjust the alignment as needed
-          children: [
-            SizedBox(width: 15),
-            SizedBox(
-              width: 200, // Adjust the width as needed
+        mainAxisAlignment:
+            MainAxisAlignment.spaceEvenly, // Adjust the alignment as needed
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 30),
+            child: SizedBox(
+              width: 150, // Adjust the width as needed
               child: FloatingActionButton(
+                elevation: 0,
+                backgroundColor: Color.fromARGB(255, 228, 247, 254),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                ),
                 onPressed: () {
                   // Action to perform when the button is pressed
                 },
                 child: Text('DM'),
               ),
             ),
-            SizedBox(
-              width: 200, // Adjust the width as needed
-              child: FloatingActionButton(
-                onPressed: () {
-                  // Action to perform when the button is pressed
-                },
-                child: Text(
-                  '予約する',
-                ),
+          ),
+          SizedBox(
+            width: 150, // Adjust the width as needed
+            child: FloatingActionButton(
+              elevation: 0,
+              backgroundColor: Color.fromARGB(255, 228, 247, 254),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(40)),
+              ),
+              onPressed: () {
+                // Action to perform when the button is pressed
+              },
+              child: Text(
+                '予約する',
               ),
             ),
-          ]),
+          ),
+        ],
+      ),
       body: FutureBuilder(
           future: getUserInfo(),
           builder: (context, snapshot) {
