@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile/DI/service_locator.dart';
 import 'package:mobile/services/auth/auth_service.dart';
 import 'package:mobile/services/chat/chat_services.dart';
@@ -22,7 +23,10 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey,
         elevation: 0,
-        title: const Text("HOME"),
+        title: Text(
+          "チャットリスト",
+          style: GoogleFonts.ubuntu(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: const BuildUserList(),
