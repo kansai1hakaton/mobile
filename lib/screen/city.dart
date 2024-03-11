@@ -178,10 +178,23 @@ class CityScreen extends HookWidget {
                   ),
                 ],
               ),
+
             ],
           ),
         ],
       ),
     );
+
+//               onChanged: (value) {
+//                 // TODO: Implement search functionality
+//               },
+//             ),
+//             ElevatedButton(
+//               onPressed: () => Navigator.pushNamed(context, '/chat'),
+//               child: null,
+//             ),
+//           ],
+//         ));
+
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:mobile/components/appbar.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/components/photo_card_view.dart';
 import 'package:mobile/components/plan_card.dart';
 import 'package:mobile/models/plan.dart';
@@ -144,9 +145,10 @@ class HomePage extends HookWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         backButton: false,
-        title: 'appname',
+        title: '旅するネコ',
         imageLink: null,
       ),
+      bottomNavigationBar: BottomNav(),
       body: ListView(
         children: [
           Align(
@@ -155,7 +157,10 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(15),
               child: Text(
                 'ここに行ってみない？',
-                style: GoogleFonts.montserrat(fontSize: 25),
+                style: GoogleFonts.anton(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black),
               ),
             ),
           ),
@@ -166,12 +171,17 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(10),
               child: Row(
                 children: [
+                  Text(
+                    "   地域を選択してください    ",
+                    style: GoogleFonts.ubuntu(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                   DropdownMenu(
                     controller: regionController,
                     enableFilter: true,
                     requestFocusOnTap: false,
                     label: Text(regionState.value.toString()),
-                    textStyle: GoogleFonts.montserrat(),
+                    textStyle: GoogleFonts.ubuntu(),
                     inputDecorationTheme: InputDecorationTheme(
                       filled: true,
                       contentPadding: EdgeInsets.symmetric(horizontal: 15),

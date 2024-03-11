@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -21,9 +22,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               icon: Icon(Icons.arrow_back_ios),
             )
           : SizedBox(),
-      title: Text(title!),
+      title: Text(title!, style: GoogleFonts.tsukimiRounded(fontSize: 25)),
       elevation: 10,
       centerTitle: true,
+      backgroundColor: Colors.white,
       actions: [
         IconButton(
           onPressed: () {},

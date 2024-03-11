@@ -95,12 +95,29 @@ class _ChatScreenState extends State<ChatScreen> {
             child: Row(
               children: [
                 Expanded(
-                  child: MyTextField(
-                    hint: "Type a message....",
-                    obsecure: false,
+                  child: TextField(
                     controller: controller,
                     focusNode: myFocusNode,
+                    decoration: const InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      hintText: "Type a message....",
+                    ),
                   ),
+                  //   MyTextField(
+                  // hint: "Type a message....",
+                  // obsecure: false,
+                  // controller: controller,
+                  // focusNode: myFocusNode,
+                  // ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(right: 20.0),
