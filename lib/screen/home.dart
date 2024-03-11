@@ -145,7 +145,7 @@ class HomePage extends HookWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         backButton: false,
-        title: '',
+        title: '旅するネコ',
         imageLink: null,
       ),
       bottomNavigationBar: BottomNav(),
@@ -157,7 +157,10 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(15),
               child: Text(
                 'ここに行ってみない？',
-                style: GoogleFonts.montserrat(fontSize: 25),
+                style: GoogleFonts.anton(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black),
               ),
             ),
           ),
@@ -168,12 +171,17 @@ class HomePage extends HookWidget {
               padding: EdgeInsets.all(10),
               child: Row(
                 children: [
+                  Text(
+                    "   地域を選択してください    ",
+                    style: GoogleFonts.ubuntu(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                   DropdownMenu(
                     controller: regionController,
                     enableFilter: true,
                     requestFocusOnTap: false,
                     label: Text(regionState.value.toString()),
-                    textStyle: GoogleFonts.montserrat(),
+                    textStyle: GoogleFonts.ubuntu(),
                     inputDecorationTheme: InputDecorationTheme(
                       filled: true,
                       contentPadding: EdgeInsets.symmetric(horizontal: 15),
