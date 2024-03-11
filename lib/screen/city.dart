@@ -50,7 +50,7 @@ class CityScreen extends HookWidget {
                     height: 180,
                     width: 210,
                     child: Card(
-                      color: Color.fromARGB(255, 201, 238, 252),
+                      color: Color.fromARGB(255, 228, 247, 254),
                       elevation: 10,
                       child: Column(
                         children: [
@@ -88,7 +88,7 @@ class CityScreen extends HookWidget {
                       height: 180,
                       width: 210,
                       child: Card(
-                        color: Color.fromARGB(255, 201, 238, 252),
+                        color: Color.fromARGB(255, 228, 247, 254),
                         elevation: 10,
                         child: Column(
                           children: [
