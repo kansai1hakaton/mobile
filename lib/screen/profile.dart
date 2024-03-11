@@ -125,7 +125,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 10, bottom: 20),
+                        padding: EdgeInsets.only(left: 17, bottom: 20),
                       ),
                       Icon(Icons.star, color: Colors.yellow),
                       Icon(Icons.star, color: Colors.yellow),
