@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/components/profile_card.dart';
 import 'package:mobile/screen/chatlist.dart';
 import 'package:mobile/screen/photo_profile.dart';
@@ -18,13 +19,13 @@ class CityScreen extends HookWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('詳細ページ'),
+        title: Text(place),
       ),
+      bottomNavigationBar: BottomNav(),
       body: ListView(
         children: [
           Column(
             children: [
-              Text(place, style: TextStyle(fontSize: 20)),
               Image.network(
                 imageLink,
               ),
