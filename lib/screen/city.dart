@@ -19,7 +19,9 @@ class CityScreen extends HookWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text(place),
+
       ),
       bottomNavigationBar: BottomNav(),
       body: ListView(
