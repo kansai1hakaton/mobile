@@ -210,7 +210,6 @@ class HomePage extends HookWidget {
               Padding(
                 padding: EdgeInsets.all(15),
                 child: PlanCard(
-                  context: context,
                   imageLink: plan.imageLink,
                   rate: plan.rate,
                   place: plan.place,
