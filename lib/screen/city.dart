@@ -18,7 +18,7 @@ class CityScreen extends HookWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('詳細ページ'),
+        title: Text('山梨'),
       ),
       body: ListView(
         children: [
