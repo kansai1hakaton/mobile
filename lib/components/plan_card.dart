@@ -86,8 +86,8 @@ class PlanCard extends StatelessWidget {
         context,
         MaterialPageRoute(
             builder: (context) => CityScreen(
-                  imageLink,
-                  place,
+                  imageLink: imageLink,
+                  place: place,
                 )),
       ),
     );

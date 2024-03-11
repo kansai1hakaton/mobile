@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/screen/login.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -28,6 +29,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         title: Text('Profile'),
       ),
+      bottomNavigationBar: BottomNav(),
       floatingActionButton: Row(
           mainAxisAlignment:
               MainAxisAlignment.spaceBetween, // Adjust the alignment as needed
