@@ -11,29 +11,38 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 10,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            width: 70,
-            height: 70,
-            child: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(360)),
-              child: Image.network(
-                'https://th.bing.com/th/id/OIP.2gDO0D0JtHDfc_8LoSWoGAAAAA?w=189&h=187&c=7&r=0&o=5&dpr=2&pid=1.7',
+    return Container(
+      width: 120,
+      height: 180,
+      child: Card(
+        color: Color.fromARGB(255, 201, 238, 252),
+        elevation: 10,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(15)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 90,
+              height: 90,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(360)),
+                child: Image.network(
+                  imageUrl,
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 5),
-            child: Text('猫ミーム'),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.only(top: 5),
+              child: Text(
+                name,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

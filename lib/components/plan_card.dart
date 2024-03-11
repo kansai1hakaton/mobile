@@ -64,7 +64,7 @@ class PlanCard extends StatelessWidget {
                       rating: rate,
                       itemBuilder: (context, index) => Icon(
                         Icons.star,
-                        color: Colors.blue,
+                        color: Color.fromARGB(255, 0, 140, 255),
                       ),
                     ),
                     Text(

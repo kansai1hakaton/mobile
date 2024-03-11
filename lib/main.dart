@@ -8,15 +8,13 @@ import 'package:mobile/bloc/theme_state.dart';
 import 'package:mobile/screen/chat.dart';
 import 'package:mobile/screen/chatlist.dart';
 import 'package:mobile/firebase_options.dart';
-
-import 'package:mobile/home.dart';
+import 'package:mobile/screen/home_page.dart';
 import 'package:mobile/screen/profile.dart';
 import 'package:mobile/screen/setting_page.dart';
 import 'package:mobile/screen/city.dart';
 
 import 'package:mobile/screen/map.dart';
 
-// import 'package:firebase_core/firebase_core.dart';
 import 'screen/sigup.dart';
 import 'screen/login.dart';
 
