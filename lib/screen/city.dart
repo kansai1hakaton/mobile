@@ -5,6 +5,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:mobile/components/profile_card.dart';
 import 'package:mobile/screen/chatlist.dart';
 import 'package:mobile/screen/photo_profile.dart';
+import 'package:mobile/screen/profile.dart';
 
 class CityScreen extends HookWidget {
   final String imageLink;
@@ -150,7 +151,7 @@ class CityScreen extends HookWidget {
                       onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PhotoProfileScreen(),
+                          builder: (context) => ProfileScreen(),
                         ),
                       ),
                       child: ProfileCard(
@@ -178,7 +179,6 @@ class CityScreen extends HookWidget {
                   ),
                 ],
               ),
-
             ],
           ),
         ],
@@ -195,6 +195,5 @@ class CityScreen extends HookWidget {
 //             ),
 //           ],
 //         ));
-
   }
 }
