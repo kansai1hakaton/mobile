@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:mobile/components/profile_card.dart';
 import 'package:mobile/screen/chatlist.dart';
 import 'package:mobile/screen/photo_profile.dart';
 
-class CityScreen extends StatefulWidget {
-  const CityScreen({super.key});
+class CityScreen extends HookWidget {
+  final String imageLink;
+  final String place;
+  CityScreen({super.key, required this.place, required this.imageLink});
 
-  @override
-  State<CityScreen> createState() => _CityScreenState();
-}
-
-class _CityScreenState extends State<CityScreen> {
   final _key = GlobalKey<FormState>();
 
   @override
@@ -25,9 +23,9 @@ class _CityScreenState extends State<CityScreen> {
         children: [
           Column(
             children: [
-              Text("山梨県"),
+              Text(place, style: TextStyle(fontSize: 20)),
               Image.network(
-                'https://th.bing.com/th/id/OIP.UdCDZYqR6E7KVMcev9ldYgHaE8?w=269&h=180&c=7&r=0&o=5&dpr=2&pid=1.7',
+                imageLink,
               ),
               TextField(
                 decoration: InputDecoration(
