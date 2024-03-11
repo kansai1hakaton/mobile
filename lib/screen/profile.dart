@@ -110,15 +110,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     children: [
                       Padding(
-                        padding:
-                            EdgeInsets.only(left: 20, top: 100, bottom: 20),
+                        padding: EdgeInsets.only(left: 20, top: 100),
                       ),
-                      Icon(Icons.star), // ニックネームアイコン
+                      Icon(
+                        Icons.star,
+                      ), // ニックネームアイコン
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         'review',
                         style: TextStyle(fontSize: 24),
                       ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 10, bottom: 20),
+                      ),
+                      Icon(Icons.star, color: Colors.yellow),
+                      Icon(Icons.star, color: Colors.yellow),
+                      Icon(Icons.star, color: Colors.yellow),
+                      Icon(Icons.star, color: Colors.yellow),
+                      Icon(Icons.star, color: Colors.yellow),
                     ],
                   ),
                 ]),
