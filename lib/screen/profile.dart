@@ -107,33 +107,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ],
                   ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.end,
-                  //   children: [
-                  //     ElevatedButton(
-                  //       onPressed: () {
-                  //         // ボタンが押された時の処理
-                  //       },
-                  //       style: ElevatedButton.styleFrom(
-                  //         shape: RoundedRectangleBorder(
-                  //           borderRadius: BorderRadius.circular(10), // 角の丸みを調整
-                  //         ),
-                  //       ),
-                  //       child: Text('DM'),
-                  //     ),
-                  //     ElevatedButton(
-                  //       onPressed: () {
-                  //         // ボタンが押された時の処理
-                  //       },
-                  //       style: ElevatedButton.styleFrom(
-                  //         shape: RoundedRectangleBorder(
-                  //           borderRadius: BorderRadius.circular(10), // 角の丸みを調整
-                  //         ),
-                  //       ),
-                  //       child: Text('予約'),
-                  //     )
-                  //   ],
-                  // ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding:
+                            EdgeInsets.only(left: 20, top: 100, bottom: 20),
+                      ),
+                      Icon(Icons.star), // ニックネームアイコン
+                      SizedBox(width: 10), // アイコンとテキストの間隔
+                      Text(
+                        'review',
+                        style: TextStyle(fontSize: 24),
+                      ),
+                    ],
+                  ),
                 ]),
               ),
             );
