@@ -28,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, "/profile"),
           icon: imageLink == null
               ? ClipOval(
                   child: Image.network(
