@@ -3,18 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mobile/models/plan.dart';
+import 'package:mobile/screen/city.dart';
 
 class PlanCard extends StatelessWidget {
   final String imageLink;
   final double rate;
   final String place;
+  final BuildContext context;
 
   const PlanCard({
     required this.imageLink,
     required this.rate,
     required this.place,
+    required this.context,
   });
 
   Widget planCard(BuildContext context, imageLink, double rate, String place) {
@@ -55,17 +56,19 @@ class PlanCard extends StatelessWidget {
                     style: TextStyle(fontSize: 15),
                   ),
                 ),
-                Padding(
-                  child: Row(
-                    children: [
-                      RatingBarIndicator(
-                        itemSize: 15,
-                        itemCount: 5,
-                        rating: rate,
-                        itemBuilder: (context, index) => Icon(
-                          Icons.star,
-                          color: Colors.blue,
-                        ),
+
+              ),
+              Padding(
+                child: Row(
+                  children: [
+                    RatingBarIndicator(
+                      itemSize: 15,
+                      itemCount: 5,
+                      rating: rate,
+                      itemBuilder: (context, index) => Icon(
+                        Icons.star,
+                        color: Color.fromARGB(255, 0, 140, 255),
+
                       ),
                       Text(
                         rate.toString(),
@@ -81,7 +84,11 @@ class PlanCard extends StatelessWidget {
             ),
           ),
         ),
+
         onTap: () => Navigator.pushNamed(context, '/city'));
+
+      ),
+
   }
 
   @override
