@@ -40,6 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   // Action to perform when the button is pressed
                 },
                 child: Text('DM'),
+                backgroundColor: Colors.cyan,
               ),
             ),
             SizedBox(
@@ -51,6 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Text(
                   '予約する',
                 ),
+                backgroundColor: Colors.orange,
               ),
             ),
           ]),
