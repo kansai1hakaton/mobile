@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/screen/login.dart';
 
 class PhotoProfileScreen extends StatefulWidget {
@@ -28,6 +29,7 @@ class _PhotoProfileScreenState extends State<PhotoProfileScreen> {
       appBar: AppBar(
         title: Text('Profile'),
       ),
+      bottomNavigationBar: BottomNav(),
       body: FutureBuilder(
           future: getUserInfo(),
           builder: (context, snapshot) {
