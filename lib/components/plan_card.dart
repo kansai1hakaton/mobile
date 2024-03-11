@@ -18,43 +18,45 @@ class PlanCard extends StatelessWidget {
     required this.context,
   });
 
-  Widget planCard(String imageLink, double rate, String place) {
+  Widget planCard(BuildContext context, imageLink, double rate, String place) {
     return GestureDetector(
-      child: Card(
-        elevation: 10,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(15),
+        child: Card(
+          elevation: 10,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(15),
+            ),
           ),
-        ),
-        child: SizedBox(
-          height: 150,
-          width: 175,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                  width: 175,
-                  height: 100,
-                  child: ClipRRect(
-                    child: Image.network(
-                      imageLink!,
-                      fit: BoxFit.fill,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15),
+          child: SizedBox(
+            height: 150,
+            width: 175,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 175,
+                    height: 100,
+                    child: ClipRRect(
+                      child: Image.network(
+                        imageLink!,
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 5),
-                child: Text(
-                  '$place',
-                  style: TextStyle(fontSize: 15),
+                Padding(
+                  padding: EdgeInsets.only(left: 5),
+                  child: Text(
+                    '$place',
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ),
+
               ),
               Padding(
                 child: Row(
@@ -66,31 +68,29 @@ class PlanCard extends StatelessWidget {
                       itemBuilder: (context, index) => Icon(
                         Icons.star,
                         color: Color.fromARGB(255, 0, 140, 255),
+
                       ),
-                    ),
-                    Text(
-                      rate.toString(),
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ],
+                      Text(
+                        rate.toString(),
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.only(
+                    left: 70,
+                  ),
                 ),
-                padding: EdgeInsets.only(
-                  left: 70,
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
+
+        onTap: () => Navigator.pushNamed(context, '/city'));
+
       ),
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => CityScreen(
-                  imageLink: imageLink,
-                  place: place,
-                )),
       ),
     );
+
   }
 
   @override
@@ -101,23 +101,11 @@ class PlanCard extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
+              child: planCard(context, imageLink, rate, place),
             ),
             Padding(
               padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
-            ),
-            Padding(
-              padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
+              child: planCard(context, imageLink, rate, place),
             ),
           ],
         ),
@@ -125,11 +113,11 @@ class PlanCard extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
+              child: planCard(context, imageLink, rate, place),
             ),
             Padding(
               padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
+              child: planCard(context, imageLink, rate, place),
             ),
           ],
         ),
@@ -137,11 +125,23 @@ class PlanCard extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
+              child: planCard(context, imageLink, rate, place),
             ),
             Padding(
               padding: EdgeInsets.all(7),
-              child: planCard(imageLink, rate, place),
+              child: planCard(context, imageLink, rate, place),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(7),
+              child: planCard(context, imageLink, rate, place),
+            ),
+            Padding(
+              padding: EdgeInsets.all(7),
+              child: planCard(context, imageLink, rate, place),
             ),
           ],
         ),

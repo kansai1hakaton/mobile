@@ -5,7 +5,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+
 import 'package:mobile/components/bottom_nav.dart';
+
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:mobile/screen/login.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -63,10 +67,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               body: Center(
                 child: Column(children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 30, bottom: 30),
+                    padding: EdgeInsets.only(bottom: 15),
                     child: Center(
-                      child: Icon(Icons.account_circle, size: 96), // アイコンを配置
-                    ),
+                        child: Image.network(
+                            'https://366e203a.rocketcdn.me/wp-content/uploads/2021/03/wealthy-photographer.jpg') // アイコンを配置
+                        ),
                   ),
                   Row(
                     children: [
@@ -77,7 +82,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['email'],
-                        style: TextStyle(fontSize: 30),
+                        style: GoogleFonts.ubuntu(
+                            fontSize: 30, fontWeight: FontWeight.w400),
                       ),
                     ],
                   ),
@@ -90,7 +96,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['name'],
-                        style: TextStyle(fontSize: 30),
+                        style: GoogleFonts.ubuntu(
+                            fontSize: 30, fontWeight: FontWeight.w400),
                       ),
                     ],
                   ),
@@ -103,7 +110,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(width: 10), // アイコンとテキストの間隔
                       Text(
                         (snapshot.data as QuerySnapshot).docs[0]['nickname'],
-                        style: TextStyle(fontSize: 30),
+                        style: GoogleFonts.ubuntu(
+                            fontSize: 30, fontWeight: FontWeight.w400),
                       ),
                     ],
                   ),
