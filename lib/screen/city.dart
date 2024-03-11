@@ -20,9 +20,11 @@ class CityScreen extends HookWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text(place,
             style:
                 GoogleFonts.ubuntu(fontSize: 20, fontWeight: FontWeight.bold)),
+
       ),
       bottomNavigationBar: BottomNav(),
       body: ListView(
