@@ -23,9 +23,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : SizedBox(),
       title: Text(title!, style: GoogleFonts.tsukimiRounded(fontSize: 25)),
-      elevation: 10,
+      elevation: 0,
       centerTitle: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       actions: [
         IconButton(
           onPressed: () => Navigator.pushNamed(context, "/profile"),

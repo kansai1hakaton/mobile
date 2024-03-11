@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile/components/bottom_nav.dart';
 import 'package:mobile/components/profile_card.dart';
 import 'package:mobile/screen/chatlist.dart';
@@ -20,7 +21,9 @@ class CityScreen extends HookWidget {
     return Scaffold(
       appBar: AppBar(
 
-        title: Text(place),
+        title: Text(place,
+            style:
+                GoogleFonts.ubuntu(fontSize: 20, fontWeight: FontWeight.bold)),
 
       ),
       bottomNavigationBar: BottomNav(),
@@ -52,7 +55,7 @@ class CityScreen extends HookWidget {
                     height: 180,
                     width: 210,
                     child: Card(
-                      color: Color.fromARGB(255, 201, 238, 252),
+                      color: Color.fromARGB(255, 228, 247, 254),
                       elevation: 10,
                       child: Column(
                         children: [
@@ -67,7 +70,9 @@ class CityScreen extends HookWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('富士山ツアー'),
+                                Text('富士山ツアー',
+                                    style: GoogleFonts.ubuntu(
+                                        fontWeight: FontWeight.bold)),
                                 RatingBarIndicator(
                                   itemSize: 15,
                                   itemCount: 5,
@@ -90,7 +95,7 @@ class CityScreen extends HookWidget {
                       height: 180,
                       width: 210,
                       child: Card(
-                        color: Color.fromARGB(255, 201, 238, 252),
+                        color: Color.fromARGB(255, 228, 247, 254),
                         elevation: 10,
                         child: Column(
                           children: [
@@ -107,10 +112,10 @@ class CityScreen extends HookWidget {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    '富士急ハイランド',
-                                    style: TextStyle(fontSize: 10.5),
-                                  ),
+                                  Text('富士急ハイランド',
+                                      style: GoogleFonts.ubuntu(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.bold)),
                                   RatingBarIndicator(
                                     itemSize: 15,
                                     itemCount: 5,

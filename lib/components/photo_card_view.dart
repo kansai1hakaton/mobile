@@ -32,9 +32,9 @@ class PhotoCards extends HookWidget {
               Positioned(
                 child: Text(
                   place,
-                  style: GoogleFonts.montserrat(
+                  style: GoogleFonts.ubuntu(
                     fontSize: 30,
-                    textStyle: TextStyle(color: Colors.white),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 bottom: 0,
